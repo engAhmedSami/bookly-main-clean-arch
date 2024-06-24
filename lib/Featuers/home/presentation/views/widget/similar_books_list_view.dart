@@ -2,7 +2,9 @@ import 'package:bookly/Featuers/home/presentation/views/widget/custom_book_image
 import 'package:flutter/material.dart';
 
 class SimilarBooksListView extends StatelessWidget {
-  const SimilarBooksListView({super.key});
+  const SimilarBooksListView({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,7 @@ class SimilarBooksListView extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 5),
               child: GestureDetector(
                 onTap: () {},
-                child: const CustomBookImage(
+                child: CustomBookImage(
                   image: '',
                 ),
               ),

@@ -3,8 +3,9 @@ import 'package:bookly/Featuers/home/presentation/views/widget/similar_books_lis
 import 'package:flutter/material.dart';
 
 class SimilerBooksSection extends StatelessWidget {
-  const SimilerBooksSection({super.key});
-
+  const SimilerBooksSection({
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
     return Column(

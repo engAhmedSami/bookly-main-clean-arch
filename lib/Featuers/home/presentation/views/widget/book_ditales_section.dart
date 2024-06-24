@@ -7,7 +7,14 @@ import 'package:flutter/material.dart';
 class BookDitalesSection extends StatelessWidget {
   const BookDitalesSection({
     super.key,
+    this.image,
+    this.title,
+    this.author,
   });
+  final String? image;
+  final String? title;
+  final String? author;
+
   @override
   Widget build(BuildContext context) {
     var width = MediaQuery.of(context).size.width;
@@ -16,21 +23,21 @@ class BookDitalesSection extends StatelessWidget {
       children: [
         Padding(
           padding: EdgeInsets.symmetric(horizontal: width * 0.2, vertical: 5),
-          child: const CustomBookImage(
-            image: '',
+          child: CustomBookImage(
+            image: image!,
           ),
         ),
         const SizedBox(
           height: 40,
         ),
-        const Text('The Lost Art of ...',
+        Text(title!,
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             style: Styles.textStyle30,
             textAlign: TextAlign.center),
         Opacity(
           opacity: 0.7,
-          child: Text('John Snow',
+          child: Text(author!,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: Styles.textStyle18.copyWith(

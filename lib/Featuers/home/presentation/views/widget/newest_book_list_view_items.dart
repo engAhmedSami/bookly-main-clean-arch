@@ -1,10 +1,9 @@
-import 'package:bookly/Core/utils/app_router.dart';
 import 'package:bookly/Core/utils/styles.dart';
+import 'package:bookly/Featuers/home/presentation/views/book_details_view.dart';
 import 'package:bookly/Featuers/home/presentation/views/widget/book_rating.dart';
 import 'package:bookly/Featuers/home/presentation/views/widget/custom_book_image.dart';
 import 'package:bookly/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 
 class NewestBooksListViewItems extends StatelessWidget {
   const NewestBooksListViewItems({
@@ -23,9 +22,16 @@ class NewestBooksListViewItems extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        GoRouter.of(context).push(
-          AppRouter.kBookDetailsView,
-        );
+        // GoRouter.of(context).push(
+        //   AppRouter.kBookDetailsView,
+        // );
+        Navigator.push(context, MaterialPageRoute(builder: (context) {
+          return BookDetailsView(
+            image: image,
+            title: title,
+            author: author,
+          );
+        }));
       },
       child: SizedBox(
         height: 125,

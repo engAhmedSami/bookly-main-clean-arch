@@ -7,7 +7,7 @@ import 'package:bookly/constants.dart';
 abstract class HomeRemoteDataSource {
   Future<List<BookEntity>> fetchFeaturedBooks({int pageNumber = 0});
   Future<List<BookEntity>> fetchNewestBooks();
-  Future<List<BookEntity>> fetchSimilarBooks({required String category});
+  Future<List<BookEntity>> fetchSimilarBooks();
 }
 
 class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
@@ -43,7 +43,7 @@ class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
   }
 
   @override
-  Future<List<BookEntity>> fetchSimilarBooks({required String category}) async {
+  Future<List<BookEntity>> fetchSimilarBooks() async {
     var data = await apiService.get(endPoin: 'volumes?q=stories');
     List<BookEntity> books = getBooksList(data);
     saveBooksData(books, kSimilarBox);
