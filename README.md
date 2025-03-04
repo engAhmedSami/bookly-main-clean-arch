@@ -1,7 +1,5 @@
 # bookly
 
-A new Flutter project.# Bookly 📚
-
 A Flutter-based book application built with clean architecture principles to ensure scalability and maintainability.
 
 ## ✨ Features
