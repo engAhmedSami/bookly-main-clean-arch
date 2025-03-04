@@ -1,4 +1,4 @@
-# bookly
+# Bookly 📚
 
 A Flutter-based book application built with clean architecture principles to ensure scalability and maintainability.
 
@@ -55,7 +55,6 @@ This project follows Clean Architecture principles, which divide the app into mu
 - Handles fetching and storing data from external sources (APIs, databases, etc.)
 - Uses repositories and data sources to provide structured access to data
 
-
 ## 🤝 Contributing
 
 Contributions are welcome! Feel free to submit a pull request.
@@ -73,3 +72,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 🌟 Don’t forget to star the repository if you find it useful!
+
